@@ -1,0 +1,26 @@
+﻿<Window x:Class="PrismSplash.SplashWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    WindowStyle="None" WindowStartupLocation="CenterScreen" ShowInTaskbar="False" Topmost="True"
+    AllowsTransparency="True" SizeToContent="Manual" BorderBrush="Black" BorderThickness="1" Width="460" Height="280">
+    <Window.Resources>
+        <Style x:Key="TextBlockFooterStyle" TargetType="{x:Type TextBlock}">
+            <Setter Property="TextWrapping" Value="Wrap" />
+            <Setter Property="TextTrimming" Value="None" />
+            <Setter Property="FontFamily" Value="Tahoma" />
+            <Setter Property="FontSize" Value="9" />
+            <Setter Property="Foreground" Value="White" />
+            <Setter Property="TextAlignment" Value="Center" />
+            <Setter Property="LineHeight" Value="12" />
+        </Style>
+    </Window.Resources>
+    <Grid>
+        <Image Stretch="Fill" x:Name="SplashImage" />
+        <TextBlock Name="lblMessage" Foreground="White" TextAlignment="Left" Margin="20, 200, 20, 7" Style="{DynamicResource TextBlockFooterStyle}" />
+        <TextBlock Name="lblCopyright" Margin="20,212,20,7" HorizontalAlignment="Stretch" VerticalAlignment="Center" Style="{DynamicResource TextBlockFooterStyle}">
+			<Run>Copyright 2008-2009 Hightech.IR. All rights reserved.</Run>
+			<LineBreak/>
+			<Run>This program is released under LGPL license.</Run>
+        </TextBlock>
+    </Grid>
+</Window>
